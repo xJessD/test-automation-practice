@@ -1,3 +1,4 @@
+![Screenshot](/assets/front-end.png "Site Preview")
 ## Automation Testing Practice
 
 Tools Used:
