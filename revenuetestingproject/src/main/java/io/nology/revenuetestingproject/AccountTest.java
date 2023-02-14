@@ -96,8 +96,8 @@ public class AccountTest {
 		WebElement deleteBtn = driver.findElement(By.xpath("//p["+rdnNum+"]//button[1]"));
 		
 		// Test button exists
-		//boolean btnExists = driver.findElement(By.xpath("//p["+rdnNum+"]//button[1]")).isDisplayed();
-		//Assert.assertEquals(btnExists, true);
+//		boolean btnExists = driver.findElement(By.xpath("//p["+rdnNum+"]//button[1]")).isDisplayed();
+//		Assert.assertEquals(btnExists, true);
 		
 		
 		deleteBtn.click();
@@ -105,7 +105,7 @@ public class AccountTest {
 		//submitButton.click();
 		
 		List<WebElement> accounts = driver.findElements(By.xpath("//p[.//button and contains(text(),'Gmail')]"));
-		List<WebElement> exists= driver.findElements(By.xpath("//p[@id='"+rdnNum+"']"));
+		List<WebElement> exists = driver.findElements(By.xpath("//p[@id='"+rdnNum+"']"));
 		
 		//boolean accountExists = driver.findElement(By.xpath("//p[@id='"+rdnNum+"']")).isDisplayed();
 		//Assert.assertEquals(accountExists, false);
