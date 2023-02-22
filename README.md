@@ -34,4 +34,4 @@ To assert this item no longer exists, I've gone with
 
 The xpath ```//p[.//button and contains(text(),'Gmail')]``` was selected so that for testing, we only wanted to count all p tags containing 'Gmail' and a button. I wanted to not count any extra empty form submissions that created empty accounts. This could be solved if there was prior validation on the form, this not needing that check. 
 
-However, the test can be considered sqewed as we expected 'Gmail' to be part of the accounts. A fix could be to have appropriate IDs for the accounts so that it is easily selectable. 
+However, the test can be considered skewed as we expected 'Gmail' to be part of the accounts. A fix could be to have appropriate IDs for the accounts so that it is easily selectable. 
