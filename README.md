@@ -50,7 +50,7 @@ Using this though, we are unable select the error message element to check that 
 
 We can make also this a more thorough check by adding in a test to ensure that nothing was submitted to accounts. That if the user started on a fresh page without any prior accounts, submitting an empty form would not change that. 
 
-![Error Message](/assets/error-message.png)
+![Error Message](/assets/error-msg.png)
 
 ### `acceptUniqueEmail()` test: 
 A feature added to the app is that is only accepts unique emails / appName. 
