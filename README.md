@@ -3,19 +3,19 @@
 
 Tools Used:
 - Java
-- React
+- Vite / React
 - Testng
 - Selenium
 
 
 ### Task:
-Building upon the initial rundown of TestNG and Selenium we want to:
+Building upon the initial project rundown of TestNG and Selenium we want to:
 
 - clear inputs after submission ✔️
 - add a delete button for each account entry, that removes it from the list (use ids) ✔️
 - create tests surrounding these new features✔️
 
-Adding on:
+Additional features:
 - required fields before submission ✔️
 - accepting only unique emails ✔️
   
@@ -48,14 +48,14 @@ The method I used to test this was ```driver.findElement(By.name("appName")).get
 
 Using this though, we are unable select the error message element to check that it is displayed, and this line retrieves the message whether we have submitted the form or not. We can however assert that the validation message is of length > 0 or check it against an expected error message. This validates that an error message exists, but does not verify that it is displayed on the page. 
 
-We can make also this a more thorough check by adding in a test to ensure that nothing was submitted to accounts. That if the user started on a fresh page without any prior accounts, submitting an empty form would not change that. 
+We can make also this a more thorough check by adding in a test to ensure that nothing was submitted to accounts. That if the user started on a fresh page without any prior accounts, submitting an empty form would still result in no accounts created. 
 
 ![Error Message](/assets/error-msg.png)
 
 ### `acceptUniqueEmail()` test: 
-A feature added to the app is that is only accepts unique emails / appName. 
+A feature added to the app is that it only accepts unique emails / appName. 
 
-The test has been written to attempt to submit the same account details more than once. Functionally, only one account should be created, and the form should not submit if we have tried to enter the same details. An error message should also show up alerting that that email already exists. 
+The test has been written to attempt to submit the same account details more than once. Functionally, only one account should be created, and the form should not submit if we have tried to enter the same details. An error message should also show up alerting that an email already exists. 
 
 To test, I've asserted to only find one account, as a second should not be created. Also searching for the error message element ```driver.findElement(By.xpath("//span[@id='errorMsg']"));``` and ensuring that an error message is present.
 
