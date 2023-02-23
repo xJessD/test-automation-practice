@@ -5,7 +5,7 @@
     <classes>
       <class name="io.nology.revenuetestingproject.AccountTest">
         <methods>
-          <include name="deleteAccount"/>
+          <include name="inputsRequired"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>

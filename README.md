@@ -14,6 +14,10 @@ Building upon the initial rundown of TestNG and Selenium we want to:
 - clear inputs after submission ✔️
 - add a delete button for each account entry, that removes it from the list (use ids) ✔️
 - create tests surrounding these new features✔️
+
+Adding on:
+- required fields before submission
+- email uniqueness
   
 
  ### Learnings & Reflections:
@@ -34,4 +38,11 @@ To assert this item no longer exists, I've gone with
 
 The xpath ```//p[.//button and contains(text(),'Gmail')]``` was selected so that for testing, we only wanted to count all p tags containing 'Gmail' and a button. I wanted to not count any extra empty form submissions that created empty accounts. This could be solved if there was prior validation on the form, this not needing that check. 
 
-However, the test can be considered skewed as we expected 'Gmail' to be part of the accounts. A fix could be to have appropriate IDs for the accounts so that it is easily selectable. 
+However, the test can be considered skewed as we expected 'Gmail' to be part of the accounts. A fix could be to have appropriate IDs for the list of accounts so that it is easily selectable. 
+
+#### `inputsRequired()`test:
+The method I used to test this was ```driver.findElement(By.name("appName")).getAttribute("validationMessage");``` as a way to retreive the error message that appears when attempting to submit a form with an empty & required field. 
+
+Using this though, we are unable select the error message element to check that it is displayed, and this line retrieves the message whether we have submitted the form or not. We can however assert that the validation message is of length > 0 or check it against an expected error message. This validates that an error message exists, but does not verify that it is displayed on the page. 
+
+We can make also this a more thorough check by adding in a test to ensure that nothing was submitted to accounts. That if the user started on a fresh page without any prior accounts, submitting an empty form would not change that. 

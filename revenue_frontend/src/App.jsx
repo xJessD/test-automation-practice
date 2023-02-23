@@ -31,12 +31,12 @@ function App() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="appName">App name: </label>
-                    <input type="text" name="appName" id="appName" />
+                    <input type="text" name="appName" id="appName" required/>
                 </div>
 
                 <div>
                     <label htmlFor="username">Username: </label>
-                    <input type="text" name="username" id="username" />
+                    <input type="text" name="username" id="username" required/>
                 </div>
                 <button>Submit</button>
             </form>

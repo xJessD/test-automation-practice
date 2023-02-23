@@ -28,13 +28,13 @@ public class AccountTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	@Test(description = "    No accounts should be dislayed on page load.")
+	@Test(description = "  No accounts should be dislayed on page load.")
 	public void noAccountsOnPageLoad() {
 		List<WebElement> noAccountsDisplayMessage = driver.findElements(By.xpath("//p[text()='There are no accounts to display']")); 
 		Assert.assertEquals(noAccountsDisplayMessage.size(), 1);
 	}
 	
-	@Test(description = "    Accounts should be displayed after submission.")
+	@Test(description = "  Accounts should be displayed after submission.")
 	public void showNewAccountOnSubmission() {
 		// //input[@id='appName']
 		// //input[@id='username']
@@ -58,7 +58,7 @@ public class AccountTest {
 		Assert.assertEquals(accounts.size(), 1);	
 	}
 	
-	@Test(description = "    Input fields should be clear after submission.")
+	@Test(description = "  Input fields should be clear after submission.")
 	public void clearInputAfterSubmission() {
 		WebElement appName = driver.findElement(By.xpath("//input[@id='appName']"));
 		WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
@@ -76,7 +76,7 @@ public class AccountTest {
 		Assert.assertEquals(username.getAttribute("value"), "");
 	}
 	
-	@Test(description = "Successfully delete the account corresponding to the button.")
+	@Test(description = "  Successfully delete the account corresponding to the button.")
 	public void deleteAccount() {
 		WebElement appName = driver.findElement(By.xpath("//input[@id='appName']"));
 		WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
@@ -113,7 +113,28 @@ public class AccountTest {
 		Assert.assertEquals(accounts.size(), n-1);
 		Assert.assertEquals(exists.size(), 0);
 	}
-
+	
+	@Test(description = "  Inputs are required before submission")
+	public void inputsRequired() {
+		WebElement appName = driver.findElement(By.xpath("//input[@id='appName']"));
+		WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
+		WebElement submitButton = driver.findElement(By.xpath("//button[normalize-space()='Submit']"));
+		
+		submitButton.click();
+		
+		String appValidation = driver.findElement(By.name("appName")).getAttribute("validationMessage");
+		String userValidation = driver.findElement(By.name("appName")).getAttribute("validationMessage");
+		
+		System.out.println(appValidation);
+		System.out.println(userValidation);
+		
+		Assert.assertEquals(appValidation, "Please fill out this field.");
+		Assert.assertEquals(userValidation, "Please fill out this field.");
+		
+		List<WebElement> noAccountsDisplayMessage = driver.findElements(By.xpath("//p[text()='There are no accounts to display']")); 
+		Assert.assertEquals(noAccountsDisplayMessage.size(), 1);
+	}
+	
 	
 	@AfterMethod
 	public void tearDown() {
