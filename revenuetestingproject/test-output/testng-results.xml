@@ -1,69 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-24T03:13:18 AEDT" name="Default suite" finished-at="2023-02-24T03:13:34 AEDT" duration-ms="15760">
+  <suite started-at="2023-02-24T04:55:05 AEDT" name="Default suite" finished-at="2023-02-24T04:55:22 AEDT" duration-ms="16767">
     <groups>
     </groups>
-    <test started-at="2023-02-24T03:13:18 AEDT" name="Default test" finished-at="2023-02-24T03:13:34 AEDT" duration-ms="15760">
+    <test started-at="2023-02-24T04:55:05 AEDT" name="Default test" finished-at="2023-02-24T04:55:22 AEDT" duration-ms="16767">
       <class name="io.nology.revenuetestingproject.AccountTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:18 AEDT" name="setUp" finished-at="2023-02-24T03:13:19 AEDT" duration-ms="1322" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:05 AEDT" name="setUp" finished-at="2023-02-24T04:55:06 AEDT" duration-ms="1297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="clearInputAfterSubmission()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:19 AEDT" name="clearInputAfterSubmission" description="  Input fields should be clear after submission." finished-at="2023-02-24T03:13:19 AEDT" duration-ms="122" status="PASS">
+        <test-method signature="acceptUniqueEmail()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:06 AEDT" name="acceptUniqueEmail" description="  Should only accept unique emails." finished-at="2023-02-24T04:55:06 AEDT" duration-ms="165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acceptUniqueEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:06 AEDT" name="tearDown" finished-at="2023-02-24T04:55:06 AEDT" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:06 AEDT" name="setUp" finished-at="2023-02-24T04:55:07 AEDT" duration-ms="790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="clearInputAfterSubmission()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:07 AEDT" name="clearInputAfterSubmission" description="  Input fields should be clear after submission." finished-at="2023-02-24T04:55:07 AEDT" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearInputAfterSubmission -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:19 AEDT" name="tearDown" finished-at="2023-02-24T03:13:19 AEDT" duration-ms="120" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:07 AEDT" name="tearDown" finished-at="2023-02-24T04:55:07 AEDT" duration-ms="113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:19 AEDT" name="setUp" finished-at="2023-02-24T03:13:20 AEDT" duration-ms="790" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:07 AEDT" name="setUp" finished-at="2023-02-24T04:55:08 AEDT" duration-ms="776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="deleteAccount()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:20 AEDT" name="deleteAccount" description="  Successfully delete the account corresponding to the button." finished-at="2023-02-24T03:13:25 AEDT" duration-ms="5309" status="PASS">
+        <test-method signature="deleteAccount()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:08 AEDT" name="deleteAccount" description="  Successfully delete the account corresponding to the button." finished-at="2023-02-24T04:55:14 AEDT" duration-ms="5306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAccount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:25 AEDT" name="tearDown" finished-at="2023-02-24T03:13:26 AEDT" duration-ms="113" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:14 AEDT" name="tearDown" finished-at="2023-02-24T04:55:14 AEDT" duration-ms="116" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:26 AEDT" name="setUp" finished-at="2023-02-24T03:13:26 AEDT" duration-ms="791" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:14 AEDT" name="setUp" finished-at="2023-02-24T04:55:14 AEDT" duration-ms="772" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="inputsRequired()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:26 AEDT" name="inputsRequired" description="  Inputs are required before submission" finished-at="2023-02-24T03:13:26 AEDT" duration-ms="76" status="PASS">
+        <test-method signature="inputsRequired()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:14 AEDT" name="inputsRequired" description="  Inputs are required before submission." finished-at="2023-02-24T04:55:15 AEDT" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- inputsRequired -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:26 AEDT" name="tearDown" finished-at="2023-02-24T03:13:27 AEDT" duration-ms="123" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:15 AEDT" name="tearDown" finished-at="2023-02-24T04:55:15 AEDT" duration-ms="122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:27 AEDT" name="setUp" finished-at="2023-02-24T03:13:27 AEDT" duration-ms="789" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:15 AEDT" name="setUp" finished-at="2023-02-24T04:55:15 AEDT" duration-ms="787" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="noAccountsOnPageLoad()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:27 AEDT" name="noAccountsOnPageLoad" description="  No accounts should be dislayed on page load." finished-at="2023-02-24T03:13:27 AEDT" duration-ms="7" status="PASS">
+        <test-method signature="noAccountsOnPageLoad()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:15 AEDT" name="noAccountsOnPageLoad" description="  No accounts should be dislayed on page load." finished-at="2023-02-24T04:55:15 AEDT" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noAccountsOnPageLoad -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:27 AEDT" name="tearDown" finished-at="2023-02-24T03:13:27 AEDT" duration-ms="113" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:15 AEDT" name="tearDown" finished-at="2023-02-24T04:55:16 AEDT" duration-ms="114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:27 AEDT" name="setUp" finished-at="2023-02-24T03:13:28 AEDT" duration-ms="790" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:16 AEDT" name="setUp" finished-at="2023-02-24T04:55:16 AEDT" duration-ms="791" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="showNewAccountOnSubmission()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:28 AEDT" name="showNewAccountOnSubmission" description="  Accounts should be displayed after submission." finished-at="2023-02-24T03:13:33 AEDT" duration-ms="5158" status="PASS">
+        <test-method signature="showNewAccountOnSubmission()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:16 AEDT" name="showNewAccountOnSubmission" description="  Accounts should be displayed after submission." finished-at="2023-02-24T04:55:22 AEDT" duration-ms="5156" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- showNewAccountOnSubmission -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@5403f35f]" started-at="2023-02-24T03:13:33 AEDT" name="tearDown" finished-at="2023-02-24T03:13:34 AEDT" duration-ms="116" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:io.nology.revenuetestingproject.AccountTest@483f6d77]" started-at="2023-02-24T04:55:22 AEDT" name="tearDown" finished-at="2023-02-24T04:55:22 AEDT" duration-ms="147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

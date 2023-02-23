@@ -114,7 +114,7 @@ public class AccountTest {
 		Assert.assertEquals(exists.size(), 0);
 	}
 	
-	@Test(description = "  Inputs are required before submission")
+	@Test(description = "  Inputs are required before submission.")
 	public void inputsRequired() {
 		WebElement appName = driver.findElement(By.xpath("//input[@id='appName']"));
 		WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
@@ -133,6 +133,27 @@ public class AccountTest {
 		
 		List<WebElement> noAccountsDisplayMessage = driver.findElements(By.xpath("//p[text()='There are no accounts to display']")); 
 		Assert.assertEquals(noAccountsDisplayMessage.size(), 1);
+	}
+	
+	@Test(description = "  Should only accept unique emails.")
+	public void acceptUniqueEmail() {
+		WebElement appName = driver.findElement(By.xpath("//input[@id='appName']"));
+		WebElement username = driver.findElement(By.xpath("//input[@id='username']"));
+		WebElement submitButton = driver.findElement(By.xpath("//button[normalize-space()='Submit']"));
+		
+		appName.sendKeys("user1@gmail.com");
+		username.sendKeys("thisIsAUsername2");
+		submitButton.click();
+		
+		appName.sendKeys("user1@gmail.com");
+		username.sendKeys("thisIsAUsername2");
+		submitButton.click();
+		
+		List<WebElement> accounts = driver.findElements(By.xpath("//p[.//button and contains(text(),'gmail')]"));
+		Assert.assertEquals(accounts.size(), 1);
+		
+		WebElement errorMsg = driver.findElement(By.xpath("//span[@id='errorMsg']"));
+		Assert.assertEquals(errorMsg.getText(), "Email already exists");
 	}
 	
 	

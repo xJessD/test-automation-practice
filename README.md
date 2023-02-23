@@ -16,12 +16,14 @@ Building upon the initial rundown of TestNG and Selenium we want to:
 - create tests surrounding these new features✔️
 
 Adding on:
-- required fields before submission
-- email uniqueness
+- required fields before submission ✔️
+- accepting only unique emails ✔️
   
+
 
  ### Learnings & Reflections:
  
+
 #### `deleteAccount()`test:
 The xpath to a delete button is simple (`//p["n"]//button[1]`) as in this case it is a simple website containing no other p tags. `//button[1]` has been used in this case as there are exists a Submit button on the form, and the delete button had only an 'x' as the text. We want to select only the button existing in the appropriate p tag.
 
@@ -40,9 +42,24 @@ The xpath ```//p[.//button and contains(text(),'Gmail')]``` was selected so that
 
 However, the test can be considered skewed as we expected 'Gmail' to be part of the accounts. A fix could be to have appropriate IDs for the list of accounts so that it is easily selectable. 
 
+
 #### `inputsRequired()`test:
 The method I used to test this was ```driver.findElement(By.name("appName")).getAttribute("validationMessage");``` as a way to retreive the error message that appears when attempting to submit a form with an empty & required field. 
 
 Using this though, we are unable select the error message element to check that it is displayed, and this line retrieves the message whether we have submitted the form or not. We can however assert that the validation message is of length > 0 or check it against an expected error message. This validates that an error message exists, but does not verify that it is displayed on the page. 
 
 We can make also this a more thorough check by adding in a test to ensure that nothing was submitted to accounts. That if the user started on a fresh page without any prior accounts, submitting an empty form would not change that. 
+
+![Error Message](/assets/error-message.png)
+
+### `acceptUniqueEmail()` test: 
+A feature added to the app is that is only accepts unique emails / appName. 
+
+The test has been written to attempt to submit the same account details more than once. Functionally, only one account should be created, and the form should not submit if we have tried to enter the same details. An error message should also show up alerting that that email already exists. 
+
+To test, I've asserted to only find one account, as a second should not be created. Also searching for the error message element ```driver.findElement(By.xpath("//span[@id='errorMsg']"));``` and ensuring that an error message is present.
+
+
+
+### Resources
+[HTML Constraint Validation](https://stackoverflow.com/questions/55223934/how-to-handle-html-constraint-validation-pop-up-using-selenium)

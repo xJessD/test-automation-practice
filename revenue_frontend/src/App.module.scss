@@ -36,3 +36,8 @@ p {
   margin: 2px 0;
   padding: 5px;
 }
+
+.errorMsg {
+  padding-left: $universal-pad;
+  color: red;
+}
