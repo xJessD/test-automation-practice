@@ -29,15 +29,18 @@ function App() {
             setErrorMsg("Email already exists");
         }
     };
-
+    
     const handleDelete = (event) => {
         const newArr = accounts.filter((acc) => acc.id !== event.id);
         setAccounts(newArr);
     };
 
+    /**
+     * 
+     * @param {String} email 
+     * @returns true if email is unique, and false if it is in the list. 
+     */
     const uniqueEmail = (email) => {
-        // Checks to see if email is unique
-        // returns false if found in accounts, and true if not found
 
         const found = accounts.find(
             (acc) => acc["appName"].toLowerCase() == email.toLowerCase()
@@ -50,12 +53,12 @@ function App() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="appName">App name: </label>
-                    <input type="text" name="appName" id="appName" required />
+                    <input type="text" name="appName" id="appName" required/>
                 </div>
 
                 <div>
                     <label htmlFor="username">Username: </label>
-                    <input type="text" name="username" id="username" required />
+                    <input type="text" name="username" id="username" required/>
                 </div>
                 <button>Submit</button>
                 <span id="errorMsg" className={style.errorMsg}>{errorMsg}</span>
